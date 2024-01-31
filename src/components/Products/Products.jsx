@@ -5,7 +5,6 @@ import "../Products/Products.css";
 
 function Products() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [recordsPerPage] = useState(12);
@@ -45,22 +44,25 @@ function Products() {
         <div className="row">
           {currentRecords.map((data) => {
             return (
-              <div className="col-sm-6 col-md-4 col-lg-3">
+              <div key={data.id} className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
-                      <img src="images/p1.png" alt="" />
+                      <img src={data.featuredImage} alt="" />
                     </div>
                     <div className="detail-box">
                       <h6>{data.name}</h6>
-                      <h6>
+                      <h6 className="">
                         Price
-                        <span>$200</span>
+                        <span>${data.basePrice}</span>
                       </h6>
                     </div>
                     <div className="new">
                       <span>New</span>
                     </div>
+                  </a>
+                  <a href="#" className="btn btn-primary">
+                    Add to cart
                   </a>
                 </div>
               </div>

@@ -5,7 +5,7 @@
 .shop_section .box {
   background-color: #eeeeee;
   position: relative;
-  padding: 10px;
+  padding: 20px 20px 30px;
   margin-top: 25px;
   height: auto;
 }
@@ -36,6 +36,7 @@
 .shop_section .box .detail-box {
   display: -webkit-box;
   display: -ms-flexbox;
+  flex-wrap: wrap;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -48,11 +49,11 @@
 }
 
 .shop_section .box .new {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,7 +65,7 @@
   -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .shop_section .btn-box {
@@ -95,9 +96,21 @@
   transition: all 0.3s;
 }
 
-.shop_section .btn-box a:hover {
+.shop_section .btn-box a:hover,
+.shop_section .btn {
   background-color: transparent;
-  color: #f16179;
+  color: #f16179 !important;
+}
+.shop_section .btn {
+  padding: 8px 20px;
+  background-color: #f16179;
+  color: #ffffff !important;
+  border: 1px solid #f16179;
+  font-size: 13px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 10px;
 }
 
 .price-filter {
@@ -111,5 +124,9 @@
 
 .price-filter label {
   max-width: 114px;
+  width: 100%;
+}
+
+.shop_section h6 {
   width: 100%;
 }

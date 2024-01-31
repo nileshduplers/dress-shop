@@ -1,7 +1,6 @@
 import React from "react";
 import "../Header/Header.css";
-
-function Header() {
+function Header(props) {
   return (
     <header className="header_section">
       <nav className="navbar navbar-expand-lg custom_nav-container ">
